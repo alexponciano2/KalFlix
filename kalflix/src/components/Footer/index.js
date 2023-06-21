@@ -1,9 +1,9 @@
-import styles from "./Footer.module.css"
+import styles from "./Footer.module.css";
 
 function Footer() {
-    return(
+    return (
         <footer className={styles.footer}>
-            <span>KalFlix &copy; Desenvolvido por Alex Ponciano - 2023</span>
+            <h2>MaiaFlix &copy; Desenvolvido por Edson Maia 2023</h2>
         </footer>
     );
 }

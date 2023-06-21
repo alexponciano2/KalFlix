@@ -1,18 +1,19 @@
 import { Link } from "react-router-dom";
-import styles from "./Header.module.css"
+import styles from "./Header.module.css";
 
 function Header() {
     return (
         <header className={styles.header}>
             <Link to="/">
-                <span>KalFlix</span>
+                <span>MaiaFlix</span>
             </Link>
-            <nav>                
-                <Link to="https://wa.link/yurlym" target="_blank">WhatsApp</Link>
-                <Link to="https://alexponciano2.github.io/kalsale/">Loja</Link>
+            <nav>
+                <Link to="/">Home</Link>
+                <Link to="/watch">Assistir</Link>
+                <Link to="/search">Pesquisar</Link>
             </nav>
         </header>
-    );
+    )
 }
 
 export default Header;
