@@ -3,7 +3,7 @@ import Container from "../../components/Container";
 import Footer from "../../components/Footer";
 import styles from "./Watch.module.css";
 import { useParams } from "react-router-dom";
-import videos from "../../json/videos.json";
+import videos from "../../json/db.json";
 import PageNotFound from "../PageNotFound";
 
 function Watch() {

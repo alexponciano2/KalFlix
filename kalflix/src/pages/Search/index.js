@@ -2,7 +2,7 @@ import Container from "../../components/Container";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import styles from "./Search.module.css";
-import videos from "../../json/videos.json";
+import videos from "../../json/db.json";
 import SearchVideoList from "../../components/SearchVideoList";
 
 function Search() {

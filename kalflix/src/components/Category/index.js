@@ -1,12 +1,12 @@
-import videos from "../../json/videos.json";
+import videos from "../../json/db.json";
 import styles from "./Category.module.css";
 
 export const categories = [
-    "Geografia",
-    "Como fazer e usar",
-    "Astronomia e Geografia",
-    "Climatologia, Meteorologia, Vegetação",
-    "Geologia e Hidrografia"
+    "INTRODUÇÃO",
+    "Melhor do Ano!",
+    "2007 a 2009",
+    "2010 a 2016",
+    "2022 até agora (BOPE)"
   ]
 
 export function filterCategory(id) {
