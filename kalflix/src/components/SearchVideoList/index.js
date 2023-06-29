@@ -9,14 +9,14 @@ function filterVideos(videos, searchText) {
 
 function SearchVideoList({ videos }) {
 
-    const [ searchText, setSearchText ] = useState('Geografia')
+    const [ searchText, setSearchText ] = useState()
     const foundVideos = filterVideos(videos, searchText)
 
     return (
         <section className={styles.container}>
             <input
                 type="search"
-                placeholder="Pesquisar..."
+                placeholder="Digite o ano (a partir de 2007)..."
                 value={searchText}
                 onChange={event => setSearchText(event.target.value)}
             />
