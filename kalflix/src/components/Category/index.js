@@ -9,17 +9,18 @@ export const categories = [
     "2022 até agora (BOPE)"
   ]
 
-export function filterCategory(id) {
+  export function filterCategory(id) {
     return videos.filter( video => video.category === categories[id] )
 }
 
 function Category({ category, children }) {
+
     return (
         <section className={styles.category}>
             <h2>{category}</h2>
-            <div>
-                { children }
-            </div>
+                <div>
+                    { children }
+                </div>
         </section>
     );
 }
