@@ -1,41 +1,40 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useState, useContext } from "react";
 
 export const FavoritesContext = createContext()
 FavoritesContext.displayName = "MyFavorites"
 
-export default function FavoritesProvider({ children }){
+export default function FavoritesProvider({ children }) {
     const [ favorite, setFavorite ] = useState([])
 
     return (
         <FavoritesContext.Provider
             value={{ favorite, setFavorite }}
         >
-            {children}
+            { children }
         </FavoritesContext.Provider>
     );
 }
 
 // Hook personalizado
-
-export function useFavoriteContext(){
+export function useFavoriteContext() {
     const { favorite, setFavorite } = useContext(FavoritesContext)
 
-    function addFavorite(newFavorite){
+    function addFavorite(newFavorite) {
 
-        // verificar se tem item repetido
+        // verificar se o tem item favorito repetido
         const repeatedFavorite = favorite.some((item) => item.id === newFavorite.id)
 
         // nova lista recebe lista anterior
         let newList = [...favorite]
 
-        // verifica se nao tem repetido e adiciona o item na lista de favoritos
-        if(!repeatedFavorite){
-            newList.push(newFavorite);
+        // verificar se nao tem repetido e adicionar o item na lista de favoritos
+        if(!repeatedFavorite) {
+            newList.push(newFavorite)
             return setFavorite(newList)
         }
 
         // se for repetido ele vai ser tirado da lista
-        newList = favorite.filter((fav) => fav.id !== newFavorite.id)
+        newList = favorite.filter((fav) => fav.id !== newFavorite.id )
         return setFavorite(newList)
 
     }
@@ -44,4 +43,5 @@ export function useFavoriteContext(){
         favorite,
         addFavorite
     }
+
 }
