@@ -26,12 +26,9 @@
     display: block;
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
-    color: white;
-    text-align: center;
 }
 
-.container input,
-.container select {
+.container input, .container select {
     background-color: #FFF;
     width: 100%;
     padding: 15px 10px;
@@ -48,7 +45,7 @@
     font-weight: 600;
     font-size: 1.125rem;
     padding: 24px 28px;
-    border: none;
+    border: none; 
     cursor: pointer;
     color: #FFF;
     margin-top: 0.5rem;
@@ -56,4 +53,14 @@
 
 .container button:hover {
     background-color: #f44336;
+}
+
+/* aula 19 */
+.error {
+    margin-top: 1.5rem;
+    background-color: #b71c1c;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.5rem;
 }
